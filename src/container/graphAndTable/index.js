@@ -16,15 +16,25 @@ class GraphAndTable extends Component {
     this.renderGraph = this.renderGraph.bind(this);
 
     this.state = {
-      graph_data: [
-        {x: 0, y: 8},
-        {x: 1, y: 2},
-        {x: 2, y: 0}
-      ],
+      graph_data: [],
       graph_title: 'graph title',
       newXAxisIsOrdinal: false
     }
   }
+
+  componentDidMount() {
+    this.renderGraph('relevance_score');
+  }
+
+  render() {
+    return (
+      <div>
+        <Graph data={this.state.graph_data} title={this.state.graph_title} xAxisIsOrdinal={this.state.xAxisIsOrdinal} />
+        <Table data={DATA} renderGraphCallback={this.renderGraph} />
+      </div>
+    );
+  }
+
 
   renderGraph(graphId) {
     let newDataSet = this.state.graph_data;
@@ -88,15 +98,6 @@ class GraphAndTable extends Component {
       graph_title : newTitle,
       xAxisIsOrdinal : newXAxisIsOrdinal
     });
-  }
-
-  render() {
-    return (
-      <div>
-        <Graph data={this.state.graph_data} title={this.state.graph_title} xAxisIsOrdinal={this.state.xAxisIsOrdinal} />
-        <Table data={DATA} renderGraphCallback={this.renderGraph} />
-      </div>
-    );
   }
 }
 

@@ -3,20 +3,33 @@ import ReactTable from "react-table";
 import DataCell  from '../cell';
 import SentimentDataCell from '../cell/sentiment';
 import RelevanceDataCell from '../cell/relevance';
+
 import 'react-table/react-table.css';
 import './styles.css';
-import DATA from '../../data/testData.js';
 
 
 class Table extends Component {
-	static propTypes = {
+	// static propTypes = {
+	// }
+
+	// static defaultProps = {
+	// }
+
+	constructor(props) {
+		super(props);
+		this.onSortedChangeCallback = this.onSortedChangeCallback.bind(this);
 	}
 
-	static defaultProps = {
+	onSortedChangeCallback(newSorted, column, shiftKey) {
+		const { renderGraphCallback } = this.props;
+
+		// console.log('TSORTED: ', newSorted, newSorted && newSorted[0] && newSorted[0].id, column);
+		const { id } = newSorted[0];
+		renderGraphCallback(id);
 	}
 
 	render() {
-
+		const {data} = this.props;
 		const columns = [{
 				Header: 'sentiment',
 				accessor: 'sentiment_score', // String-based value accessors!
@@ -52,8 +65,9 @@ class Table extends Component {
 			}]
 		return (<div>
 			<ReactTable
-				data={DATA}
+				data={data}
 				columns={columns}
+				onSortedChange={this.onSortedChangeCallback}
 			/>
 		</div>);
 	}

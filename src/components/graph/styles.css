@@ -1,0 +1,11 @@
+.graphContainer h2 {
+	font-size: 15px;
+	font-weight: 300;
+	text-align: right;
+	color: #6D6E71;	
+}
+
+.graph {
+	background: #F8F8F8;
+	margin-bottom: 40px;
+}

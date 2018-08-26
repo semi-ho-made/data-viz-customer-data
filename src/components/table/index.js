@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactTable from "react-table";
-// import FilterMenu from './filtermenu';
 import DataCell  from '../cell';
 import SentimentDataCell from '../cell/sentiment';
 import RelevanceDataCell from '../cell/relevance';

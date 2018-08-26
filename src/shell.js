@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import Table from './components/table';
 import styles from './shell.css';
 
 class App extends Component {
   render() {
     return (
-      <div className={styles.body}>
-        <header className={styles.header}>
-          <h1 className={styles.title}>Welcome to React</h1>
+      <div class={'body'}>
+        <header class={'header'}>
+          <h1 class={'title'}>Customer Comments</h1>
         </header>
+        <Table />
       </div>
     );
   }

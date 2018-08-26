@@ -1,5 +1,4 @@
-export default {
-  "data": [
+export default [
     {
       "body": "Aenean id massa ex. Curabitur euismod erat scelerisque nibh ornare ultricies.",
       "city": "Houston",
@@ -11000,5 +10999,4 @@ export default {
       "sentiment_score": 3.61,
       "time_stamp": "11/2/2017 16:17:09"
     }
-  ]
-}
+  ];

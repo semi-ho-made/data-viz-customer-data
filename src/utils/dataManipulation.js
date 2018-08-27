@@ -12,7 +12,7 @@ snippet from dataset
       "time_stamp": "7/30/2018 17:12:57"
     } 
 
-sample Graph
+sample plot data 
 	data = [
 		{x: 0, y: 8},
 		{x: 1, y: 2},

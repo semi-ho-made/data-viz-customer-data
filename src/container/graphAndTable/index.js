@@ -1,3 +1,11 @@
+/*
+  Graph and Table Container component
+  Functionality between Graph and Table
+  Data manipulation layer
+
+  Note: Iteration 2 of this would can could be done in Redux
+*/
+
 import React, { Component } from 'react';
 import Graph from '../../components/graph';
 import Table from '../../components/table';

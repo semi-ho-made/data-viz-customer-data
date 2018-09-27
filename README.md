@@ -1,3 +1,15 @@
+
+A data visualization exercise.
+
+Task
+- Given a set of raw data design a page to visualize this data.
+- create mock and design
+- build page
+- 5-7 hour test
+
+
+## Results
+
 <h1 align="center">Customer Comment Data Vis</h1>
 
 The Customer Comment Data Vis provides insight on what are customers are saying.
